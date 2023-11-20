@@ -1,1 +1,125 @@
-<p>agendar-citas works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="motivo">Motivo de la Cita:</label>
+        <input type="text" id="motivo" name="motivo" required>
+
+        <label for="especialidad">Especialidad:</label>
+        <select id="especialidad" name="especialidad" required>
+            <option value="cardiologia">Cardiología</option>
+            <option value="dermatologia">Dermatología</option>
+            <option value="gastroenterologia">Gastroenterología</option>
+            <!-- Agrega más opciones según las especialidades disponibles -->
+        </select>
+
+        <label for="medico">Médico:</label>
+        <select id="medico" name="medico" required>
+            <!-- Aquí se llenarán dinámicamente los médicos relacionados con la especialidad seleccionada -->
+        </select>
+
+        <button type="submit">Agendar Cita</button>
+    </form>
+
+    <script>
+        // Simula la carga dinámica de médicos relacionados con la especialidad seleccionada
+        document.getElementById('especialidad').addEventListener('change', function() {
+            const medicoSelect = document.getElementById('medico');
+            const especialidad = this.value;
+
+            // Limpia las opciones anteriores
+            medicoSelect.innerHTML = '';
+
+            // Simula obtener los médicos de la especialidad seleccionada
+            const medicos = obtenerMedicosPorEspecialidad(especialidad);
+
+            // Llena las opciones en el select
+            medicos.forEach(function(medico) {
+                const option = document.createElement('option');
+                option.value = medico.id;
+                option.text = medico.nombre;
+                medicoSelect.add(option);
+            });
+        });
+
+        // Función simulada para obtener médicos por especialidad
+        function obtenerMedicosPorEspecialidad(especialidad) {
+            // Aquí deberías obtener los médicos de la especialidad seleccionada desde tu backend
+            // Puedes hacer una petición AJAX o utilizar datos predefinidos según tus necesidades
+            // Retorna una lista de objetos con la información del médico (id y nombre)
+            switch (especialidad) {
+                case 'cardiologia':
+                    return [
+                        { id: 1, nombre: 'Dr. Cardiólogo 1' },
+                        { id: 2, nombre: 'Dr. Cardiólogo 2' },
+                    ];
+                case 'dermatologia':
+                    return [
+                        { id: 3, nombre: 'Dr. Dermatólogo 1' },
+                        { id: 4, nombre: 'Dr. Dermatólogo 2' },
+                    ];
+                case 'gastroenterologia':
+                    return [
+                        { id: 5, nombre: 'Dr. Gastroenterólogo 1' },
+                        { id: 6, nombre: 'Dr. Gastroenterólogo 2' },
+                    ];
+                // Agrega más casos según las especialidades disponibles
+                default:
+                    return [];
+            }
+        }
+    </script>
+</body>
+</html>
+

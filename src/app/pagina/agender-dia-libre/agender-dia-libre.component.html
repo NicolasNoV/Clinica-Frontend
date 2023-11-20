@@ -1,1 +1,59 @@
-<p>agender-dia-libre works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Día Libre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .leave-request-container {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .leave-request-container h2 {
+            color: #333;
+        }
+
+        .leave-request-container button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .leave-request-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="leave-request-container">
+        <h2>Solicitud de Día Libre</h2>
+
+        <form>
+            <label for="leaveDate">Seleccione el Día Libre:</label>
+            <input type="date" id="leaveDate" name="leaveDate" required>
+
+            <button type="submit">Solicitar Día Libre</button>
+        </form>
+    </div>
+</body>
+</html>

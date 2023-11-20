@@ -38,6 +38,7 @@ import { FiltrarCitasPorMedicoComponent } from './pagina/filtrar-citas-por-medic
 import { VerDetalleCitaComponent } from './pagina/ver-detalle-cita/ver-detalle-cita.component';
 import { GestionPqrsComponent } from './pagina/gestion-pqrs/gestion-pqrs.component';
 import { ListarCitaPacienteComponent } from './pagina/listar-cita-paciente/listar-cita-paciente.component';
+import { GestionCitasComponent } from './pagina/gestion-citas/gestion-citas.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { ListarCitaPacienteComponent } from './pagina/listar-cita-paciente/lista
     FiltrarCitasPorMedicoComponent,
     VerDetalleCitaComponent,
     GestionPqrsComponent,
-    ListarCitaPacienteComponent
+    ListarCitaPacienteComponent,
+    GestionCitasComponent
   ],
   imports: [
     BrowserModule,
