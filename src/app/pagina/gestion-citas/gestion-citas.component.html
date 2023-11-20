@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Citas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .appointment-management-container {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .appointment-management-container h2 {
+            color: #333;
+        }
+
+        .management-buttons {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .management-buttons button {
+            margin-bottom: 10px;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .management-buttons button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="appointment-management-container">
+        <h2>Gestión de Citas</h2>
+
+        <div class="management-buttons">
+            <button onclick="listarCitasPendientes()">Listar Citas Pendientes</button>
+            <button onclick="listarCitasPorPaciente()">Listar Citas por Paciente</button>
+            <button onclick="listarCitasRealizadas()">Listar Citas Realizadas</button>
+            <button onclick="agendarDiaLibre()">Agendar Día Libre</button>
+        </div>
+    </div>
+
+    <script>
+        function listarCitasPendientes() {
+            // Lógica para listar citas pendientes
+            alert("Listar Citas Pendientes");
+        }
+
+        function listarCitasPorPaciente() {
+            // Lógica para listar citas por paciente
+            alert("Listar Citas por Paciente");
+        }
+
+        function listarCitasRealizadas() {
+            // Lógica para listar citas realizadas
+            alert("Listar Citas Realizadas");
+        }
+
+        function agendarDiaLibre() {
+            // Lógica para agendar día libre
+            alert("Agendar Día Libre");
+        }
+    </script>
+</body>
+</html>
+

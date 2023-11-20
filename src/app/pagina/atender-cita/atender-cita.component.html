@@ -1,1 +1,129 @@
-<p>atender-cita works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de Citas Atendidas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .appointment-details-container {
+            width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .appointment-details-container h2 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .details-form {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .details-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .details-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        .details-form button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .details-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="appointment-details-container">
+        <h2>Detalles de Citas Atendidas</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Cita</th>
+                    <th>Paciente</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ejemplo de datos de citas atendidas -->
+                <tr>
+                    <td>1</td>
+                    <td>Paciente A</td>
+                    <td>2023-01-01</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Paciente B</td>
+                    <td>2023-01-02</td>
+                </tr>
+                <!-- Puedes agregar más filas según las citas atendidas -->
+            </tbody>
+        </table>
+
+        <div class="details-form">
+            <h3>Agregar Detalles</h3>
+
+            <form>
+                <label for="diagnosis">Diagnóstico:</label>
+                <textarea id="diagnosis" name="diagnosis" rows="4" required></textarea>
+
+                <label for="treatment">Tratamiento:</label>
+                <textarea id="treatment" name="treatment" rows="4" required></textarea>
+
+                <label for="doctorNotes">Notas del Médico:</label>
+                <textarea id="doctorNotes" name="doctorNotes" rows="4" required></textarea>
+
+                <button type="submit">Guardar Detalles</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
