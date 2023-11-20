@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RegistroPacienteDTO } from 'src/app/modelo/registro-paciente-dto';
+import { ClinicaService } from 'src/app/servicios/clinica.service';
 
 @Component({
   selector: 'app-registro',
@@ -15,7 +16,7 @@ export class RegistroComponent {
   tipoSangres:string[];
   archivos!:FileList;
 
-  constructor(){
+  constructor(private clinicaService: ClinicaService){
   this.registroPacienteDTO = new RegistroPacienteDTO();
   this.ciudades = [];
   this.cargarCiudades();
@@ -39,11 +40,15 @@ export class RegistroComponent {
   }
 
   private cargarCiudades(){
-    this.ciudades.push("Armenia");
-    this.ciudades.push("Calarcá");
-    this.ciudades.push("Pereira");
-    this.ciudades.push("Manizales");
-    this.ciudades.push("Medellín");
+
+    this.clinicaService.listarCiudades().subscribe({
+      next: data => {
+        this.ciudades = data.respuesta;
+      },
+      error: error => {
+        console.log(error);
+      }
+    });
   }
 
   private cargarEpss(){
