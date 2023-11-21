@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CitaMedicoDTO } from 'src/app/modelo/cita-medico-dto';
+import { PqrsService } from 'src/app/servicios/pqrs.service';
 
 @Component({
   selector: 'app-listar-citas-pendientes',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class ListarCitasPendientesComponent {
 
+  constructor(  ) {
+  
+  }
 }

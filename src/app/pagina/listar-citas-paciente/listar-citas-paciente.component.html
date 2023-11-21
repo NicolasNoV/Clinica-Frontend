@@ -1,1 +1,88 @@
-<p>listar-citas-paciente works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Citas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .list-appointments-container {
+            width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .list-appointments-container h2 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="list-appointments-container">
+        <h2>Listar Citas</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha de Creación</th>
+                    <th>Fecha de Cita</th>
+                    <th>Motivo</th>
+                    <th>Médico</th>
+                    <th>Estado de Cita</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Datos de citas (ejemplo) -->
+                <tr>
+                    <td>2023-03-10</td>
+                    <td>2023-03-15</td>
+                    <td>Consulta General</td>
+                    <td>Dr. Pérez</td>
+                    <td>Pendiente</td>
+                </tr>
+                <tr>
+                    <td>2023-03-12</td>
+                    <td>2023-03-20</td>
+                    <td>Dolor de Cabeza</td>
+                    <td>Dr. García</td>
+                    <td>Atendida</td>
+                </tr>
+                <!-- Puedes agregar más filas según las citas del paciente -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

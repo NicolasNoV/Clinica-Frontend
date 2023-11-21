@@ -1,2 +1,4 @@
-export class DiaLibreDTO {
+export interface DiaLibreDTO {
+    dia: Date;
+    codigoMedico: number;
 }

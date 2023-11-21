@@ -1,2 +1,5 @@
-export class NuevaPasswordDTO {
-}
+export interface NuevaPasswordDTO {
+    
+    correo: string;
+    nuevaPassword: string;
+  }

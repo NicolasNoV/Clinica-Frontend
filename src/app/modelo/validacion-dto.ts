@@ -1,2 +1,4 @@
-export class ValidacionDTO {
+export interface ValidacionDTO {
+    campo: string;
+    error: string;
 }

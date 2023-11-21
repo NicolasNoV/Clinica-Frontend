@@ -1,1 +1,91 @@
-<p>listar-citas-realizadas works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citas Completadas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .completed-appointments-container {
+            width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .completed-appointments-container h2 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="completed-appointments-container">
+        <h2>Citas Completadas</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Código de Cita</th>
+                    <th>Paciente</th>
+                    <th>Fecha</th>
+                    <th>Diagnóstico</th>
+                    <th>Tratamiento</th>
+                    <th>Notas del Médico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ejemplo de datos de citas completadas -->
+                <tr>
+                    <td>1</td>
+                    <td>Paciente A</td>
+                    <td>2023-01-01</td>
+                    <td>Diagnóstico A</td>
+                    <td>Tratamiento A</td>
+                    <td>Notas del Médico A</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Paciente B</td>
+                    <td>2023-01-02</td>
+                    <td>Diagnóstico B</td>
+                    <td>Tratamiento B</td>
+                    <td>Notas del Médico B</td>
+                </tr>
+                <!-- Puedes agregar más filas según las citas completadas -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

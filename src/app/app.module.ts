@@ -39,6 +39,8 @@ import { VerDetalleCitaComponent } from './pagina/ver-detalle-cita/ver-detalle-c
 import { GestionPqrsComponent } from './pagina/gestion-pqrs/gestion-pqrs.component';
 import { ListarCitaPacienteComponent } from './pagina/listar-cita-paciente/listar-cita-paciente.component';
 import { GestionCitasComponent } from './pagina/gestion-citas/gestion-citas.component';
+import { GestionMedicosComponent } from './pagina/gestion-medicos/gestion-medicos.component';
+import { GestionPacientesComponent } from './pagina/gestion-pacientes/gestion-pacientes.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +78,9 @@ import { GestionCitasComponent } from './pagina/gestion-citas/gestion-citas.comp
     VerDetalleCitaComponent,
     GestionPqrsComponent,
     ListarCitaPacienteComponent,
-    GestionCitasComponent
+    GestionCitasComponent,
+    GestionMedicosComponent,
+    GestionPacientesComponent
   ],
   imports: [
     BrowserModule,

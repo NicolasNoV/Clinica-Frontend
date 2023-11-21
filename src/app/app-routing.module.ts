@@ -15,6 +15,9 @@ import { EliminarMedicoComponent } from './pagina/eliminar-medico/eliminar-medic
 import { FiltrarCitasPorFechaComponent } from './pagina/filtrar-citas-por-fecha/filtrar-citas-por-fecha.component';
 import { FiltrarCitasPorMedicoComponent } from './pagina/filtrar-citas-por-medico/filtrar-citas-por-medico.component';
 import { GestionPqrsComponent } from './pagina/gestion-pqrs/gestion-pqrs.component';
+import { GestionCitasComponent } from './pagina/gestion-citas/gestion-citas.component';
+import { GestionMedicosComponent } from './pagina/gestion-medicos/gestion-medicos.component';
+import { GestionPacientesComponent } from './pagina/gestion-pacientes/gestion-pacientes.component';
 import { InicioComponent } from './pagina/inicio/inicio.component';
 import { LinkRecuperacionComponent } from './pagina/link-recuperacion/link-recuperacion.component';
 import { ListarCitasComponent } from './pagina/listar-citas/listar-citas.component';
@@ -50,11 +53,14 @@ const routes: Routes = [
 { path: "filtrarCitasPorFecha/:fecha", component: FiltrarCitasPorFechaComponent },
 { path: "filtrarCitasPorMedico/:codigoMedico", component: FiltrarCitasPorMedicoComponent },
 { path: "gestion-pqrs", component: GestionPqrsComponent },
+{ path: "gestionCitas", component: GestionCitasComponent },
+{ path: "gestionMedicos", component: GestionMedicosComponent },
+{ path: "gestionPacientes", component: GestionPacientesComponent },
 { path: "", component: InicioComponent },
 { path: "linkRecuperacion/:correo", component: LinkRecuperacionComponent },
 { path: "listarCitaPaciente", component: ListarCitaPacienteComponent },
 { path: "listarCitas", component: ListarCitasComponent },
-{ path: "listarCitasPaciente/:codigoPaciente", component: ListarCitasPacienteComponent },
+{ path: "listarCitasPaciente", component: ListarCitasPacienteComponent },
 { path: "listarCitasPendientes/:codigo", component: ListarCitasPendientesComponent },
 { path: "listarCitasRealizadas/:codigoMedico", component: ListarCitasRealizadasComponent },
 { path: "listarMedicos", component: ListarMedicosComponent },

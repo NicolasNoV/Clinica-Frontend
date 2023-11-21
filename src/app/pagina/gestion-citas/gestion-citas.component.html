@@ -55,10 +55,10 @@
         <h2>Gestión de Citas</h2>
 
         <div class="management-buttons">
-            <button onclick="listarCitasPendientes()">Listar Citas Pendientes</button>
-            <button onclick="listarCitasPorPaciente()">Listar Citas por Paciente</button>
-            <button onclick="listarCitasRealizadas()">Listar Citas Realizadas</button>
-            <button onclick="agendarDiaLibre()">Agendar Día Libre</button>
+            <button type="button" routerLink="/listarCitasPendientes/:codigo" class="btn btn-success me-2"><i class="fa-solid fa-plus me-1"></i> Listar Citas Pendiente</button>
+            <button type="button" routerLink="/listarCitaPaciente" class="btn btn-success me-2"><i class="fa-solid fa-plus me-1"></i> Listar Citas Por Paciente</button>
+            <button type="button" routerLink="/listarCitasRealizadas/:codigoMedico" class="btn btn-success me-2"><i class="fa-solid fa-plus me-1"></i> Listar Citas Realizadas</button>
+            <button type="button" routerLink="/agendarDiaLibre" class="btn btn-success me-2"><i class="fa-solid fa-plus me-1"></i> Agendar Dia Libre</button>
         </div>
     </div>
 

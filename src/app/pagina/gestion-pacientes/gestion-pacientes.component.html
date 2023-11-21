@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opciones Paciente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .patient-options-container {
+            width: 80%;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .patient-options-container h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .options-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .options-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="patient-options-container">
+        <h2>Opciones Paciente</h2>
+
+        <a href="/cambiarPassword" class="options-button">Cambiar Contraseña</a>
+        <a href="/agendarCitas" class="options-button">Agendar Citas</a>
+        <a href="/listarMedicosEspecialidad/:especialidad" class="options-button">Listar Médicos por Especialidad</a>
+        <a href="/listarCitasPaciente" class="options-button">Listar Citas</a>
+    </div>
+</body>
+</html>

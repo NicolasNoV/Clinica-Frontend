@@ -1,2 +1,5 @@
-export class MedicoCitasPacienteDTO {
+export interface MedicoCitasPacienteDTO {
+
+    nombreMedico: string;
+    especialidad: string;
 }

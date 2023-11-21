@@ -1,1 +1,123 @@
-<p>listar-medicos-especialidad works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Médicos por Especialidad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .select-specialty-container {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .select-specialty-container h2 {
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .list-doctors-button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .list-doctors-button:hover {
+            background-color: #2980b9;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="select-specialty-container">
+        <h2>Listar Médicos por Especialidad</h2>
+
+        <div class="form-group">
+            <label for="specialty">Seleccione una Especialidad:</label>
+            <select id="specialty" name="specialty">
+                <!-- Opciones para la especialidad -->
+                <option value="cardiologia">Cardiología</option>
+                <option value="dermatologia">Dermatología</option>
+                <option value="pediatria">Pediatría</option>
+                <!-- Puedes agregar más opciones según sea necesario -->
+            </select>
+        </div>
+
+        <button class="list-doctors-button">Listar Médicos</button>
+
+        <table id="doctor-table">
+            <thead>
+                <tr>
+                    <th>Médico</th>
+                    <th>Especialidad</th>
+                    <th>Horario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Datos de médicos (ejemplo) -->
+                <tr>
+                    <td>Dr. Pérez</td>
+                    <td>Cardiología</td>
+                    <td>Lunes a Viernes, 9:00 AM - 5:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Dr. García</td>
+                    <td>Dermatología</td>
+                    <td>Lunes a Viernes, 10:00 AM - 6:00 PM</td>
+                </tr>
+                <!-- Puedes agregar más filas según los médicos de la especialidad seleccionada -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
